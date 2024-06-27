@@ -1,0 +1,23 @@
+{%extends "base.html" %}
+{% block title %} Replace Patient {% endblock %}
+{% block content %} 
+<body style = "background-color: white;">
+<div style="margin-left: 20px; margin-top: 10px;">
+	<h1 class="card-title">Replace Patient</h1>
+	{% for data,value in content.items() %}
+    	<p>{{data}} : {{value}}</p>
+    {% endfor %}
+	<form style = "margin: 50px auto; width: 320px;" method = "POST" action = "replace">
+        <div class="form-group">
+	    	<input type="submit" value="Replace" class="btn btn-success">
+	    </div>
+	</form>
+	<form style = "margin: 50px auto; width: 320px;" method = "POST" action = "notreplace">
+        <div class="form-group">
+	    	<input type="submit" value="Ignore" class="btn btn-success">
+	    </div>
+	</form>
+	<a class="btn btn-danger" href="/" role="button">Home Page</a>
+</div>
+</body>
+{% endblock %}

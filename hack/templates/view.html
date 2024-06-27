@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} Discharge Patient {% endblock %}
+{% block content %} 
+<body style = "background-color: #00BFFF;">
+<div style="margin-top: 10px; margin-left: 20px;">
+	<h1 class="card-title">View Rooms</h1>
+	{% for data,value in content.items() %}
+		<p>{{data}}:</p><br/>
+		{% for x in value %}
+			{% for key,val in x.items() %}
+				<li> {{key}} : {{val}} </li>
+			{%endfor%}
+		{% endfor %}
+    {% endfor %}
+</div>
+<a class="btn btn-danger" href="" role="button">Home Page</a>
+</body>
+{% endblock %}
